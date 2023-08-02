@@ -8,6 +8,7 @@ import Header from "@/components/Header"
 export const metadata: Metadata = {
   title: 'Canvas Lancer',
   description: 'Agency Website Landing Page | Mert Enercan',
+  openGraph:{images:['https://raw.githubusercontent.com/mertthesamael/canvas-lancer/master/_assets/logo.png']}
 }
 
 export default function RootLayout({
