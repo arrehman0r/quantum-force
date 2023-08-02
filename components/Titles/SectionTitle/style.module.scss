@@ -1,0 +1,32 @@
+@use "../../../style/variables.scss" as *;
+.sectionTitle{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: max-content;
+    gap: 1.2rem;
+    & hr{
+        width: 14.3rem;
+        height: .2rem;
+        background: #D8D8D8;
+        border: none;
+    }
+    &__text{
+        display: flex;
+        gap: .5rem;
+        & h1{   
+            color: #696969;
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 155%;
+            letter-spacing: .048rem;
+            & span{
+                color: $primary-color;
+                font-size: 1.6rem;
+                
+            }
+        }
+    }
+        
+}

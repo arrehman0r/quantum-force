@@ -1,31 +1,64 @@
-import Image from 'next/image';
-import styles from './style.module.scss'
-import React, { FC } from 'react'
-import aboutBigger from "@/_assets/about_bigger.png"
-import aboutSmall from "@/_assets/about_smal.png"
-interface AboutSectionProps {
-  
-}
+import Image from "next/image";
+import styles from "./style.module.scss";
+import React, { FC } from "react";
+import aboutBigger from "@/_assets/about_bigger.png";
+import aboutSmall from "@/_assets/about_smal.png";
+import SectionTitle from "@/components/Titles/SectionTitle";
+import PrimaryButton from "@/components/Buttons/PrimaryButton";
+interface AboutSectionProps {}
 
-const AboutSection: FC<AboutSectionProps> = ({  }) => {
+const AboutSection: FC<AboutSectionProps> = ({}) => {
   return (
     <section className={styles.aboutSection}>
-        <div className={styles.aboutSection__inner}>
-
-     <div className={styles.aboutSection__inner__img}>
-        <div>
-       <Image src={aboutBigger} fill style={{objectFit:'cover'}} alt='Section Image'/>
+      <div className={styles.aboutSection__inner}>
+        <div className={styles.aboutSection__inner__img}>
+          <div>
+            <Image
+              src={aboutBigger}
+              style={{ objectFit: "cover" }}
+              alt="Section Image"
+            />
+          </div>
+          <div>
+            <Image
+              src={aboutSmall}
+              style={{ objectFit: "cover" }}
+              alt="Section Image"
+            />
+          </div>
         </div>
-        <div>
-       <Image src={aboutSmall} fill style={{objectFit:'cover'}} alt='Section Image'/>
+        <div className={styles.aboutSection__inner__content}>
+          <div className={styles.aboutSection__inner__title}>
+            <SectionTitle text="About Canvas" highlight="About" />
+          </div>
+          <div className={styles.aboutSection__inner__content__info}>
+            <div className={styles.aboutSection__inner__content__info__title}>
+              <h1>
+                Introduction To Best <span>Digital Agency</span>{" "}
+              </h1>
+            </div>
+            <div className={styles.aboutSection__inner__content__info__desc}>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Adipiscing nisl id at
+                arcu enim id gravida pulvinar. Tristique consectetur mi
+                curabitur congue enim dignissim amet justo. Porta morbi nulla
+                aliquet adipiscing. Sed diam mauris erat faucibus eu posuere
+                ultricies quisque amet. Quam pellentesque in tristique
+                <br />
+                <br />
+                sed neque scelerisque quam pulvinar. Risus dictum elementum
+                lacus urna. Neque eget sagittis vulputate nam id morbi id.
+                Aliquam molestie posuere pulvinar arcu
+              </p>
+            </div>
+            <div className={styles.aboutSection__inner__content__info__button}>
+              <PrimaryButton text="Hire Us" />
+            </div>
+          </div>
         </div>
-     </div>
-     <div className={styles.aboutSection__inner__content}>
-
-     </div>
-        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
 export default AboutSection;
