@@ -1,0 +1,78 @@
+@use "../../style/variables.scss" as *;
+.heroSection{
+    height: 100vh;
+    position: relative;
+    background: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & img{
+        mix-blend-mode: luminosity;
+    }
+    &__inner{
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        width: 79.7rem;
+
+        &__welcomeText{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 2.2rem;
+            & h4{
+                color: #FFF;
+
+                /* P 16 */
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: .048rem;
+                & span{
+                    color: $primary-color;
+                    font-weight: 700;
+                }
+            }
+            & h1{
+                color: #FFF;
+
+                /* Header Title 70 */
+                font-size: 7rem;
+                font-weight: 700;
+                line-height: 128.5%; /* 89.95px */
+                letter-spacing: .21rem;
+                & span{
+                    position: relative;
+                    &::after{
+                        left: 0;
+                        bottom: 0rem;
+                        position: absolute;
+                        content: "";
+                        width: 100%;
+                        height: 2px;
+                        background-color:$primary-color;
+                    }
+                }
+            }
+            & p{
+                color: #FFF;
+                text-align: center;
+                /* P 16 */
+                font-size: 1.6rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: .048rem;
+            }
+        }
+        &__buttons{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@use "../../../style/variables.scss" as *;
+
+.primaryButton{
+    background-color: $primary-color;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 1.2rem 1.8rem;
+    min-width: 18.1rem;
+    /* P 16 */
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.48px;
+}

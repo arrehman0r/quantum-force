@@ -1,0 +1,42 @@
+@use "../../style/variables.scss" as *;
+.aboutSection{
+    background: white;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+    &__inner{
+        width: $page-format;
+        height: max-content;
+        display: flex;
+        gap: 8.2rem;
+        &__img{
+            
+        
+            width: 100%;
+            min-height: 10rem;
+            height: 50.5rem;
+            gap: 2.4rem;
+            position: relative;
+            & div:nth-child(1){
+                width: 39.8rem;
+                height: 42.2rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            & div:nth-child(2){
+                width: 30.1rem;
+height: 31.9rem;
+position: absolute;
+bottom: 0;
+right: 0;
+            }
+        }
+        &__content{
+            width: 100%;
+            border: 1px solid red;
+            min-height: 10rem;
+        }
+    }
+}
