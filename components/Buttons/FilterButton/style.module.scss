@@ -1,0 +1,22 @@
+@use "../../../style/variables.scss" as * ;
+.filterButton{
+    /* P 16 Bold */
+    width: max-content;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.48px;
+    padding: 1rem 2.5rem;
+    background-color: #F2F2F2;
+    border-radius: 5px;
+    color: black;
+    transition: background-color .5s ease;
+    cursor: pointer;
+}
+
+.active{
+background-color: $primary-color;
+font-weight: 700;
+color: white;
+}

@@ -29,7 +29,7 @@ const AboutSection: FC<AboutSectionProps> = ({}) => {
         </div>
         <div className={styles.aboutSection__inner__content}>
           <div className={styles.aboutSection__inner__title}>
-            <SectionTitle text="About Canvas" highlight="About" />
+            <SectionTitle theme="dark" text="About Canvas" highlight="About" />
           </div>
           <div className={styles.aboutSection__inner__content__info}>
             <div className={styles.aboutSection__inner__content__info__title}>

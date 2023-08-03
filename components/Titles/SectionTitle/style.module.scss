@@ -15,18 +15,15 @@
         display: flex;
         gap: .5rem;
         & h1{   
-            color: #696969;
             font-size: 1.6rem;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 700;
             line-height: 155%;
             letter-spacing: .048rem;
             & span{
                 color: $primary-color;
                 font-size: 1.6rem;
-                
             }
         }
     }
-        
 }

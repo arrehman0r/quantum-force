@@ -1,5 +1,61 @@
+@use "../../style/variables.scss" as *;
 .servicesSection{
     background: #202020;
     padding: 12rem 0;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    &__inner{
+        width: $page-format;
+        display: flex;
+        justify-content: space-between;
+        &__content{
+            width: 53.4rem;
+            min-height: 10rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.9rem;
+            &__info{
+                display: flex;
+                flex-direction: column;
+                gap: 3.1rem;
+                &__title{
+
+                    & h1{
+                        color: #F8F8F8;
+                        font-size: 4.8rem;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 125.5%;
+                        letter-spacing: .144rem;
+                        & span{
+                            color: $primary-color;
+                        }
+                    }
+                }
+                &__desc{
+
+                    & p{
+                        color: #FFF;
+                        text-align: justify;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        line-height: 155%; /* 24.8px */
+                    }
+                }
+            }
+            
+            
+        }
+
+        &__services{
+
+            &__items{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 6.1rem;
+                column-gap: 2rem;
+            }
+        }
+    }
 }
