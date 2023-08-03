@@ -1,9 +1,10 @@
 @use "../../style/variables.scss" as *;
 .projectsSection{
     width: 100%;
-    padding: 11.2rem 0;
+    padding: 14.2rem 0;
     display: flex;
     justify-content: center;
+    background-color: $light-bg;
     &__inner{
         width: $page-format;
         display: flex;
@@ -42,6 +43,11 @@
             &__filters{
                 display: flex;
                 gap: .8rem;
+            }
+
+            &__images{
+                display: flex;
+                gap: 2.4rem;
             }
         }
     }

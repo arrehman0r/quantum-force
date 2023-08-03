@@ -1,0 +1,51 @@
+@use "../../../style/variables.scss" as * ;
+.testimonialCard{
+ 
+    width: 36.9rem;
+    height: 21.7rem;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    align-items: center;
+    position: relative;
+    
+    padding: 6.8rem 1.8rem 0 1.8rem;
+    &__icon{
+        background-color: $primary-color;
+        min-width: 9.87rem;
+        min-height: 9.87rem;
+        border: 3px solid white;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 75%;
+        display: grid;
+        place-items: center;
+        
+    }
+
+    &__rating{
+        display: flex;
+        gap: 1rem;
+    }
+    & h2{
+        color: #000;
+        text-align: justify;
+
+        /* P Title B16 */
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: 0.48px;
+    }
+    & p{
+    
+        color: #696969;
+        text-align: center;
+        font-size: 1.1rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 155%; /* 17.05px */
+        letter-spacing: 0.33px;
+    }
+}

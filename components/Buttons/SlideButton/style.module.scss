@@ -1,0 +1,21 @@
+@use "../../../style/variables.scss" as * ;
+.slideButton{
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.active{
+    width: 1.6rem;
+    height: 1.6rem;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 2px solid $primary-color;
+    background-color: $dark-bg  ;
+    cursor: pointer;
+    transition: .5s ease;
+
+}

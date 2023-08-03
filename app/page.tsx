@@ -2,6 +2,7 @@ import AboutSection from "@/containers/about-section";
 import HeroSection from "@/containers/hero-section";
 import ProjectsSection from "@/containers/projects-section";
 import ServicesSection from "@/containers/services-section";
+import TestimonialsSection from "@/containers/testimonial-section";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <ProjectsSection />
+      <TestimonialsSection />
     </main>
   )
 }

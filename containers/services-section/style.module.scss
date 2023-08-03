@@ -1,6 +1,6 @@
 @use "../../style/variables.scss" as *;
 .servicesSection{
-    background: #202020;
+    background: $dark-bg;
     padding: 12rem 0;
     width: 100%;
     display: flex;
