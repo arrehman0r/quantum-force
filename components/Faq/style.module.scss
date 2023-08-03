@@ -1,0 +1,43 @@
+.faq{
+    position: relative;
+    width: 97.2rem;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    cursor: pointer;
+    &__title{
+        border-radius: 5px;
+        padding: 3.6rem;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        transition: .2s ease;
+        & h4{
+
+            /* P 16 */
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.48px;
+        }
+
+    }
+    &__answer{
+        padding: 2.5rem 3.6rem;
+        top: 100%;
+        transition: .5s ease;
+        & p{
+            color: #696969;
+
+            /* P 16 */
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: 0.48px;
+            text-align: justify;
+        }
+    }
+}
