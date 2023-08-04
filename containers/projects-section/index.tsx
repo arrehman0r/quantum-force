@@ -11,7 +11,7 @@ interface ProjectsSectionProps {
 
 const ProjectsSection: FC<ProjectsSectionProps> = ({  }) => {
   return (
-    <section className={styles.projectsSection}>
+    <section id='projects' className={styles.projectsSection}>
         <div className={styles.projectsSection__inner}>
             <div className={styles.projectsSection__inner__title}>
                 <SectionTitle text='Our Portfolio' theme='dark' centered />

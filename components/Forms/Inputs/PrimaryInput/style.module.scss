@@ -1,0 +1,23 @@
+.primaryInput{
+    width: 100%;
+    flex-shrink: 0;
+    padding: 1.7rem 2.1rem;
+    color: #000;
+    text-align: justify;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155%; /* 24.8px */
+    letter-spacing: 0.48px;
+    font-family: inherit;
+    border-radius: 5px;
+    border: 1px solid #CACACA;
+    background: #FFF;
+    &::placeholder{
+        color: black;
+    }
+}
+.textArea{
+    resize:none;
+    min-height: 14.9rem;
+}

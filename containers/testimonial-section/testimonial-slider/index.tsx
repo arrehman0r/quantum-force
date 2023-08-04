@@ -26,7 +26,6 @@ const TestimonialSlider: FC<TestimonialSliderProps> = ({ slidePerView, items }) 
     onSwiper={(swiper) => {
         swiperRef.current = swiper;
     }}
-    centeredSlidesBounds
     >
         {items.map((el,_i) => <SwiperSlide key={_i} className={styles.testimonialSlider__slide}><TestimonialCard rating={el.rating} name={el.name} comment={el.comment} /></SwiperSlide>)}
     </Swiper>

@@ -10,7 +10,7 @@ interface FaqSectionProps {
 
 const FaqSection: FC<FaqSectionProps> = ({  }) => {
   return (
-    <section className={styles.faqSection}>
+    <section id='faq' className={styles.faqSection}>
         <div className={styles.faqSection__inner}>
             <div className={styles.faqSection__inner__title}>
                 <SectionTitle centered text='FAQs' theme='dark' highlight=' '/>

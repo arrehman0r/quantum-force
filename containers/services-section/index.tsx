@@ -4,6 +4,7 @@ import React, { FC } from 'react'
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
 import ServiceCard from '@/components/Cards/ServiceCard';
 import { Services } from './constants';
+import Link from 'next/link';
 
 interface ServicesSectionProps {
   
@@ -11,7 +12,7 @@ interface ServicesSectionProps {
 
 const ServicesSection: FC<ServicesSectionProps> = ({  }) => {
   return (
-    <section className={styles.servicesSection}>
+    <section id='services' className={styles.servicesSection}>
      <div className={styles.servicesSection__inner}>
         <div className={styles.servicesSection__inner__content}>
             <div className={styles.servicesSection__inner__title}>
@@ -29,7 +30,9 @@ const ServicesSection: FC<ServicesSectionProps> = ({  }) => {
                 </p>
               </div>
               <div className={styles.servicesSection__inner__content__info__button}>
-                <PrimaryButton text='Hire Us'/>
+                <Link href={'#contact'}>
+                  <PrimaryButton text='Hire Us'/>
+                </Link>
               </div>
             </div>
         </div>

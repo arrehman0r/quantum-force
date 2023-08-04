@@ -5,11 +5,12 @@ import aboutBigger from "@/_assets/about_bigger.png";
 import aboutSmall from "@/_assets/about_smal.png";
 import SectionTitle from "@/components/Titles/SectionTitle";
 import PrimaryButton from "@/components/Buttons/PrimaryButton";
+import Link from "next/link";
 interface AboutSectionProps {}
 
 const AboutSection: FC<AboutSectionProps> = ({}) => {
   return (
-    <section className={styles.aboutSection}>
+    <section id="about" className={styles.aboutSection}>
       <div className={styles.aboutSection__inner}>
         <div className={styles.aboutSection__inner__img}>
           <div>
@@ -52,7 +53,9 @@ const AboutSection: FC<AboutSectionProps> = ({}) => {
               </p>
             </div>
             <div className={styles.aboutSection__inner__content__info__button}>
-              <PrimaryButton text="Hire Us" />
+              <Link href={'#contact'}>
+                <PrimaryButton text="Hire Us" />
+              </Link>
             </div>
           </div>
         </div>

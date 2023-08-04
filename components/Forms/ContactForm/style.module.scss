@@ -1,0 +1,10 @@
+.contactForm{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+    &__inputs{
+        display: flex;
+        flex-direction: column;
+        gap: 2.3rem;
+    }
+}

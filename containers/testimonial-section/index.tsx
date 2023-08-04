@@ -14,7 +14,7 @@ interface TestimonialsSectionProps {
 const TestimonialsSection: FC<TestimonialsSectionProps> = ({  }) => {
     const slidePerView = 3;
   return (
-    <section className={styles.testimonialsSection}>
+    <section id='testimonials' className={styles.testimonialsSection}>
         <div className={styles.testimonialsSection__inner}>
             <div className={styles.testimonialsSection__inner__title}>
                 <div>

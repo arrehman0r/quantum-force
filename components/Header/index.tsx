@@ -3,6 +3,7 @@ import { Logo } from '../Icons/Logo';
 import styles from './style.module.scss'
 import React, { FC } from 'react'
 import PrimaryButton from '../Buttons/PrimaryButton';
+import { HeaderNavs } from './constants';
 
 interface HeaderProps {
   
@@ -17,15 +18,12 @@ const Header: FC<HeaderProps> = ({  }) => {
                 <h1>Canvas <span>Lancer</span></h1>
             </div>
             <nav className={styles.header__inner__nav}>
-                <Link href={'/'}>Home</Link>
-                <Link href={'/'}>About</Link>
-                <Link href={'/'}>Services</Link>
-                <Link href={'/'}>Portfolio</Link>
-                <Link href={'/'}>Testimonials</Link>
-                <Link href={'/'}>Faqs</Link>
+                {HeaderNavs.map((el, _i) => <Link key={_i} href={el.href}>{el.text}</Link>)}
             </nav>
             <div className={styles.header__inner__button}>
-                <PrimaryButton text='Contact Us'/>
+                <Link href={'#contact'}>
+                    <PrimaryButton text='Contact Us'/>
+                </Link>
             </div>
         </div>
     </header>

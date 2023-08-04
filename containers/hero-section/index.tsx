@@ -3,13 +3,14 @@ import styles from './style.module.scss'
 import React, { FC } from 'react'
 import herobg from "@/_assets/herobg.png"
 import PrimaryButton from '@/components/Buttons/PrimaryButton';
+import Link from 'next/link';
 interface HeroSectionProps {
   
 }
 
 const HeroSection: FC<HeroSectionProps> = ({  }) => {
   return (
-    <section className={styles.heroSection}>
+    <section id='hero' className={styles.heroSection}>
         <Image src={herobg} alt='Hero Bg' fill style={{objectFit:'cover'}}/>
         <div className={styles.heroSection__inner}>
         <div className={styles.heroSection__inner__welcomeText}>
@@ -18,8 +19,12 @@ const HeroSection: FC<HeroSectionProps> = ({  }) => {
             <p>Lorem ipsum dolor sit amet consectetur. Aliquam quisque cursus proin adipiscing quis diam. Eu fringilla elit commodo nec aliquet. Augue pharetra nibh co</p>
         </div>
         <div className={styles.heroSection__inner__buttons}>
+          <Link href={'#contact'}>
             <PrimaryButton text='Hire Us'/>
+          </Link>
+          <Link href={'#projects'}>
             <PrimaryButton text='View Portfolio' style='white'/>
+          </Link>
         </div>
         </div>
     </section>
