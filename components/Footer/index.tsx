@@ -23,7 +23,7 @@ const Footer: FC<FooterProps> = ({  }) => {
                 <p>Lorem ipsum dolor sit amet consectetur. Scelerisque vitae et vitae suspendisse vulputate vestibulum tortor nisl cursus. Egestas nulla in </p>
             </div>
             <div className={styles.footer__inner__brand__socials}>
-                {Socials.map((el, _i) => <FooterIconFrame icon={el.icon()}/>)}
+                {Socials.map((el, _i) => <FooterIconFrame key={_i} icon={el.icon()}/>)}
             </div>
         </div>
         {FooterNavs.map((el, _i,) => (
@@ -37,7 +37,7 @@ const Footer: FC<FooterProps> = ({  }) => {
         <div className={styles.footer__inner__contact}>
             <h2>Contact Information</h2>
             <ul>
-            {Contacts.map((el, _i) => <li><>{el.icon}</>{el.value}</li>)}
+            {Contacts.map((el, _i) => <li key={_i}><>{el.icon}</>{el.value}</li>)}
             </ul>
         </div>
      </div>
