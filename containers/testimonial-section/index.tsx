@@ -32,6 +32,9 @@ const TestimonialsSection: FC<TestimonialsSectionProps> = ({  }) => {
                 <div className={styles.testimonialsSection__inner__content__testimnoials}>
                     <TestimonialSlider items={Testimonials} slidePerView={slidePerView}/>
                 </div>
+                <div className={styles.testimonialsSection__inner__title__slideBullets__mobile}>
+                    {Array.from({length:Testimonials.length / slidePerView}, (el, _i) => <SlideButton id={_i} key={_i} />)}
+                </div>    
             </div>
         </div>
     </section>

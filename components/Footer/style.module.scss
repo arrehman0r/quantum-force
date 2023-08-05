@@ -144,3 +144,20 @@
     }
 
 }
+
+
+@media (max-width:750px) {
+    .footer{
+        &__inner{
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+        }
+        &__banner{
+            &__inner{
+
+                flex-direction: column;
+            }
+        }
+    }
+}

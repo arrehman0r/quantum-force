@@ -56,3 +56,14 @@
         }
     }
 }
+
+@media (max-width:750px) {
+    .header{
+        &__inner{
+
+            &__nav{
+                display: none;
+            }
+        }
+    }
+}

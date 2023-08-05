@@ -19,6 +19,9 @@
                 display: flex;
                 gap: .7rem;
                 align-items: center;
+                &__mobile{
+                    display: none;
+                }
                 
             }
         }
@@ -44,6 +47,28 @@
                 }
 
                 
+            }
+        }
+    }
+}
+
+
+@media (max-width:720px) {
+    .testimonialsSection{
+
+        &__inner{
+
+            &__title{
+
+                &__slideBullets{
+                    display: none;
+                    &__mobile{
+                        width: 100%;
+                        justify-content: center;
+                        gap: 4rem;
+                        display: flex;
+                    }
+                }
             }
         }
     }
