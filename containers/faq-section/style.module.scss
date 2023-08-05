@@ -39,3 +39,17 @@
         }
     }
 }
+
+@media (max-width:720px) {
+    .faqSection{
+    
+        &__inner{
+            &__content{
+                width: 100%;
+                &__questions{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

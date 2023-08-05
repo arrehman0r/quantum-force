@@ -76,3 +76,19 @@
         }
     }
 }
+
+@media (max-width:750px) {
+    .heroSection{
+        &__inner{
+            width: $page-format;
+            &__welcomeText{
+                align-items: flex-start;
+                text-align: left;
+                & p{
+                    text-align: left;
+                }
+                
+            }
+        }
+    }
+}

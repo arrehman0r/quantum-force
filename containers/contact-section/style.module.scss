@@ -58,8 +58,25 @@
             & img{
                 position: absolute;
                 bottom: 0;
-                right: 0
+                right: 0;
+                max-height: 100%;
+                object-fit: cover;
             }
         }
+    }
+}
+
+
+
+@media (max-width:1100px) {
+    .contactSection{
+      &__inner{
+&__content{
+    width: 100%;
+}
+        &__img{
+            display: none;
+        }
+      }
     }
 }

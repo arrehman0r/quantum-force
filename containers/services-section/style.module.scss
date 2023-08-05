@@ -59,3 +59,26 @@
         }
     }
 }
+
+@media (max-width:750px) {
+    .servicesSection{
+
+        &__inner{
+            flex-direction: column-reverse;
+            gap:9rem;
+            &__content{
+                width: 100%;
+                &__info{
+
+                    align-items: center;
+                }
+            }
+            &__services{
+                width: 100%;
+                &__items{
+                    place-items: center;
+                }
+            }
+        }
+    }
+}
