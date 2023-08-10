@@ -1,3 +1,9 @@
+![image](https://github.com/mertthesamael/canvas-lancer/assets/79616834/659f6497-1db4-4a16-9fb2-0e1eb2b9ef8e)
+
+
+
+![Uploading image.png…]()
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
