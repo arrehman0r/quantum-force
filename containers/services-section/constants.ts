@@ -6,25 +6,25 @@ export const Services = [
     {
         id:1,
         title:"UI/UX",
-        desc:"Lorem ipsum dolor sit amet consectetur. Adipiscing nisl id at arcu enim id gravida pulvinar. Tristique",
+        desc:"Crafting intuitive interfaces and seamless user experiences that delight and engage.",
         img:UiIcon
     },
     {
         id:2,
         title:"Development",
-        desc:"Lorem ipsum dolor sit amet consectetur. Adipiscing nisl id at arcu enim id gravida pulvinar. Tristique",
+        desc:" Building responsive, high-performance websites that drive your online presence.",
         img:DevelopmentIcon
     },
     {
         id:3,
         title:"Mobile Development",
-        desc:"Lorem ipsum dolor sit amet consectetur. Adipiscing nisl id at arcu enim id gravida pulvinar. Tristique",
+        desc:"Creating powerful, user-friendly mobile apps for iOS and Android platforms.",
         img:MobileIcon
     },
     {
         id:4,
-        title:"SEO",
-        desc:"Lorem ipsum dolor sit amet consectetur. Adipiscing nisl id at arcu enim id gravida pulvinar. Tristique",
+        title:"AI Solutions:",
+        desc:"Harnessing cutting-edge AI to automate processes and drive data-driven decisions.",
         img:SeoIcon
     },
 ]

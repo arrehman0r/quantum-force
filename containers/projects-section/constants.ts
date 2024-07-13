@@ -20,7 +20,7 @@ export const Filters = [
     },
     {
         id:5,
-        name:'SEO'
+        name:'AI'
     },
 ]
 

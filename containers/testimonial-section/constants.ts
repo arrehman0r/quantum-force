@@ -1,93 +1,28 @@
 export const Testimonials = [
     {
         id:1,
-        name:'Name Here',
+        name:'Global Retail Solutions',
         rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
+        comment:'Responsive, professional, and ahead of schedule. They delivered exactly what we needed and more.'
     },
     {
         id:2,
-        name:'Name Here',
+        name:'HealthTech Pioneers',
         rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
+        comment:'From concept to launch, they guided us every step of the way. Our app now leads the market thanks to their innovative approach.'
     },
     {
         id:3,
-        name:'Name Here',
+        name:'SwiftServe Solutions',
         rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
+        comment:'Their AI-powered chatbot revolutionized our customer service. We have seen a 70% reduction in response times and a 45% increase in customer satisfaction.'
     },
     {
         id:4,
-        name:'Name Here',
+        name:'Green Energy Solutions',
         rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
+        comment:'The predictive analytics tool they developed has transformed our inventory management. We have cut costs by 30% and improved product availability by 25%.'
     },
-    {
-        id:5,
-        name:'Name Here',
-        rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
-    },
-    {
-        id:6,
-        name:'Name Here',
-        rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
-    },
-    {
-        id:7,
-        name:'Name Here',
-        rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
-    },
-    {
-        id:8,
-        name:'Name Here',
-        rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
-    },
-    {
-        id:9,
-        name:'Name Here',
-        rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
-    },
-    {
-        id:10,
-        name:'Name Here',
-        rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
-    },
-    {
-        id:11,
-        name:'Name Here',
-        rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
-    },
-    {
-        id:12,
-        name:'Name Here',
-        rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
-    },
-    {
-        id:13,
-        name:'Name Here',
-        rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
-    },
-    {
-        id:14,
-        name:'Name Here',
-        rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
-    },
-    {
-        id:15,
-        name:'Name Here',
-        rating:5,
-        comment:'Lorem ipsum dolor sit amet consectetur. Nisi ullamcorper tincidunt odio arcu id praesent vitae. Facilisis vitae fringilla donec'
-    },
+
 
 ]

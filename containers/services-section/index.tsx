@@ -26,8 +26,8 @@ const ServicesSection: FC<ServicesSectionProps> = ({  }) => {
               </div>
               <div className={styles.servicesSection__inner__content__info__desc}>
                 <p>
-                Lorem ipsum dolor sit amet consectetur. Adipiscing nisl id at arcu enim id gravida pulvinar. Tristique consectetur mi curabitur congue enim dignissim amet justo. Porta morbi nulla aliquet adipiscing. Sed diam mauris erat faucibus eu posuere ultricies quisque amet. Quam pellentesque in tristique 
-                </p>
+                Tailored technology, measurable results
+                Our custom-built solutions are designed to meet your unique business needs. We leverage cutting-edge tech to deliver scalable, high-performance digital assets that drive real-world impact for your brand.          </p>
               </div>
               <div className={styles.servicesSection__inner__content__info__button}>
                 <Link href={'#contact'}>

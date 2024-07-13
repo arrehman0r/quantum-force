@@ -22,7 +22,7 @@ const ContactSection: FC<ContactSectionProps> = ({  }) => {
                         <h1><span>Contact</span> Us & We Can Work Together</h1>
                     </div>
                     <div className={styles.contactSection__inner__content__info__desc}>
-                        <p>Lorem ipsum dolor sit amet consectetur. Adipiscing nisl id at arcu enim id gravida pulvinar. Tristique consectetur mi curabitur congue enim dignissim </p>
+                        <p>You can schedule your free 30 minutes call with one of our experts today.</p>
                     </div>
                     <div className={styles.contactSection__inner__content__info__form}>
                         <ContactForm />

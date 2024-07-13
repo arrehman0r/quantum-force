@@ -14,9 +14,9 @@ const HeroSection: FC<HeroSectionProps> = ({  }) => {
         <Image src={herobg} alt='Hero Bg' fill style={{objectFit:'cover'}}/>
         <div className={styles.heroSection__inner}>
         <div className={styles.heroSection__inner__welcomeText}>
-            <h4>Welcome To <span> Canvas Lancer</span></h4>
-            <h1>Designing the Future with <span>Canvas Lancer</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur. Aliquam quisque cursus proin adipiscing quis diam. Eu fringilla elit commodo nec aliquet. Augue pharetra nibh co</p>
+            <h4>Welcome To <span> Quantum Force</span></h4>
+            <h1>Redefining  Innovations</h1>
+            <p>Providing AI-powered solutions and services to the world’s leading businesses to redefine their objectives with automation and innovation.</p>
         </div>
         <div className={styles.heroSection__inner__buttons}>
           <Link href={'#contact'}>

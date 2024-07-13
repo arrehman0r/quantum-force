@@ -30,26 +30,21 @@ const AboutSection: FC<AboutSectionProps> = ({}) => {
         </div>
         <div className={styles.aboutSection__inner__content}>
           <div className={styles.aboutSection__inner__title}>
-            <SectionTitle theme="dark" text="About Canvas" highlight="About" />
+            <SectionTitle theme="dark" text="About Quantum Force" highlight="About" />
           </div>
           <div className={styles.aboutSection__inner__content__info}>
             <div className={styles.aboutSection__inner__content__info__title}>
               <h1>
-                Introduction To Best <span>Digital Agency</span>{" "}
+                Introduction To Best <span>Software House</span>{" "}
               </h1>
             </div>
             <div className={styles.aboutSection__inner__content__info__desc}>
               <p>
-                Lorem ipsum dolor sit amet consectetur. Adipiscing nisl id at
-                arcu enim id gravida pulvinar. Tristique consectetur mi
-                curabitur congue enim dignissim amet justo. Porta morbi nulla
-                aliquet adipiscing. Sed diam mauris erat faucibus eu posuere
-                ultricies quisque amet. Quam pellentesque in tristique
+            We are expert digital product developers serving businesses of all sizes. Our reputation is built on reliability and excellence in engineering apps, websites, mobile solutions, widgets, e-commerce platforms, and enterprise portals. We stand behind every product we create, offering lifetime support for our high-quality work. Our commitment: delivering dependable digital solutions that drive your business forward.
                 <br />
                 <br />
-                sed neque scelerisque quam pulvinar. Risus dictum elementum
-                lacus urna. Neque eget sagittis vulputate nam id morbi id.
-                Aliquam molestie posuere pulvinar arcu
+                Cutting-edge digital solutions: From concept to launch
+                We create robust apps, dynamic websites, and innovative digital products. Our full-service approach covers every step, ensuring seamless development and delivery.
               </p>
             </div>
             <div className={styles.aboutSection__inner__content__info__button}>

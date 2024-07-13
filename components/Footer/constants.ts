@@ -19,7 +19,7 @@ export const FooterNavs : FooterNavs[] = [
       { id: 1, text: "UI/UX", href: "/"},
       { id: 2, text: "Website Dev", href: "/"},
       { id: 3, text: "Mobile Dev", href: "/"},
-      { id: 3, text: "SEO", href: "/"}
+      { id: 3, text: "AI", href: "/"}
     ],
   },
   {
@@ -62,19 +62,19 @@ export const Contacts = [
     {
         id:1,
         type:'Mail',
-        value:'mertenercan@gmail.com',
+        value:'contact@quantumforce.dev',
         icon:Mail()
     },
-    {
-        id:2,
-        type:'Phone',
-        value:'+31 331 31 31',
-        icon:Phone()
-    },
+    // {
+    //     id:2,
+    //     type:'Phone',
+    //     value:'+31 331 31 31',
+    //     icon:Phone()
+    // },
     {
         id:3,
         type:'Location',
-        value:'Olympos Mountains',
+        value:'Lahore, Pakistan',
         icon:Location()
     },
 ]

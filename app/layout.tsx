@@ -7,7 +7,7 @@ import Footer from "@/components/Footer"
 
 
 export const metadata: Metadata = {
-  title: 'Canvas Lancer',
+  title: 'Quantum Force',
   description: 'Agency Website Landing Page | Mert Enercan',
   openGraph:{images:['https://raw.githubusercontent.com/mertthesamael/canvas-lancer/master/_assets/logo.png']}
 }
