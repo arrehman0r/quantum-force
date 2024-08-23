@@ -2,31 +2,31 @@ export const HeaderNavs = [
     {
         id:1,
         text:'Home',
-        href:'#hero'
+        href:'/'
     },
     {
         id:2,
         text:'About',
-        href:'#about'
+        href:'/about'
     },
     {
         id:3,
         text:'Services',
-        href:'#services'
+        href:'/services'
     },
     {
         id:4,
         text:'Portfolio',
-        href:'#projects'
+        href:'/blog'
     },
     {
         id:5,
         text:'Testimonials',
-        href:'#testimonials'
+        href:'/testimonials'
     },
     {
         id:6,
         text:'Faqs',
-        href:'#faq'
+        href:'/faq'
     },
 ]
