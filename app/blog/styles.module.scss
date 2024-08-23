@@ -1,53 +1,74 @@
-// styles/PostList.module.scss
 .container {
-    max-width: 1200px;
-    margin: 100px auto;
+  max-width: 100%;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  margin-top: 100px;
+}
+
+.postList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5rem; /* mt-10 */
+  padding: 1rem; /* Added padding */
+  gap: 1.5rem; /* Added gap between posts */
+}
+
+.card {
+  width: 100%;
+  max-width: 800px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(243, 98, 98, 0.2);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
   }
-  
-  .postList {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #fefcbf; /* Yellow 300 */
-    margin-top: 2.5rem; /* mt-10 */
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* Reduced height for better responsiveness */
+  object-fit: cover;
+}
+
+.content {
+  padding: 1.5rem; /* Increased padding */
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Reduced gap */
+  color: #4a5568; /* Gray 700 */
+  font-size: 0.875rem; /* text-sm */
+  margin-bottom: 1rem; /* Increased margin for better spacing */
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
-  .card {
-    width: 1000px;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    margin: 1rem; /* m-4 */
-    text-decoration: none;
+}
+
+.author,
+.date {
+  strong {
+    font-weight: 700;
   }
-  
-  .image {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-  }
-  
-  .content {
-    padding: 1rem; /* p-4 */
-  }
-  
-  .info {
-    display: flex;
-    gap: 1.25rem; /* gap-5 */
-    color: gray;
-    font-size: 0.875rem; /* text-sm */
-    margin-bottom: 0.5rem; /* mb-2 */
-  }
-  
-  .author, .date {
-    font-size: 0.875rem; /* text-sm */
-  }
-  
-  .title {
-    font-size: 1.125rem; /* text-lg */
-    font-weight: bold;
-    color: #4a5568; /* text-gray-800 */
-  }
-  
+}
+
+.title {
+  font-size: 1.5rem; /* text-xl */
+  font-weight: bold;
+  color: #2d3748; /* Gray 800 */
+  margin-top: 0.5rem;
+}
+
+.summary{
+  margin-top: 10px;
+}

@@ -54,8 +54,14 @@ const PostDetail = () => {
               </p>
             </div>
             <h2 className={styles.title}>{post.title}</h2>
-            <p className={styles.content}>{post.content}</p>
-            <Link href="/" className={styles.backLink}>
+            <p className={styles.summary}>{post.summary}</p>
+            <p
+              className={styles.content}
+              dangerouslySetInnerHTML={{
+                __html: post.content,
+              }}
+            ></p>
+            <Link href="/blog" className={styles.backLink}>
               Back to Posts
             </Link>
           </div>

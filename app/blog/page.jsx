@@ -1,6 +1,6 @@
 // app/blog/page.jsx
 import Link from 'next/link';
-import styles from './styles.module.scss'; // Import your Sass styles
+import styles from './styles.module.scss'; // Updated the file name
 
 export default async function PostList() {
   // Fetch posts data from your API
@@ -32,6 +32,7 @@ export default async function PostList() {
                 </p>
               </div>
               <h2 className={styles.title}>{post.title}</h2>
+              <p className={styles.summary}>{post.summary}</p>
             </div>
           </Link>
         ))}
