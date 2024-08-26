@@ -13,30 +13,13 @@
 }
 
 .postCard {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   background-color: #ffffff; // white
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
   overflow: hidden;
   margin: 1rem;
-}
-
-.coverImage {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-}
-
-.details {
-  padding: 1rem;
-}
-
-.meta {
-  display: flex;
-  gap: 1.25rem;
-  color: #4a5568; // gray-700
-  font-size: 0.875rem;
-  margin-bottom: 0.5rem;
 }
 
 .author,
@@ -46,25 +29,66 @@
   }
 }
 
+.coverImage {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+}
+
+.details {
+  padding: 1.5rem;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #4a5568; // gray-700
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+}
+
 .title {
-  font-size: 2.25rem; // text-4xl
+  font-size: 1.75rem; // text-3xl
   font-weight: 700;
   color: #2d3748; // gray-800
   margin-top: 20px;
+
+  @media (min-width: 640px) {
+    font-size: 2.25rem; // text-4xl
+  }
 }
 
 .content {
   color: #4a5568; // gray-700
   margin: 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.75rem;
+
+  @media (min-width: 640px) {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+  }
 }
 
 .backLink {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   background-color: #3182ce; // blue-500
   color: #ffffff; // white
   border-radius: 0.5rem;
   text-decoration: none;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+
   &:hover {
     background-color: #2b6cb0; // blue-600
   }
