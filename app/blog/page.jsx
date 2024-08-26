@@ -7,7 +7,6 @@ export default async function PostList() {
   // Fetch posts data from your API
   const res = await fetch(`${NEXT_PUBLIC_URL}post/`);
   const posts = await res.json();
-  console.log("blog res", posts)
   // Handle empty or undefined posts data
   if (!posts || posts.length === 0) {
     return <div>No posts available</div>;
