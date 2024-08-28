@@ -1,39 +1,52 @@
-// app/blog/[id]/page.jsx
-
 import Image from 'next/image';
 import { NEXT_PUBLIC_URL } from '../../../env';
 import styles from './styles.module.scss';
-
+import ReactMarkdown from 'react-markdown';
 // This function generates the static params for all posts
 export async function generateStaticParams() {
-  const res = await fetch(`${NEXT_PUBLIC_URL}post/`);
-  const posts = await res.json();
-
-  return posts.map((post) => ({
-    id: post._id,
-  }));
+  try {
+    const res = await fetch(`${NEXT_PUBLIC_URL}items/Blog/`);
+    if (!res.ok) throw new Error('Failed to fetch posts');
+    const posts = await res.json();
+    
+    // Ensure id is a string
+    return posts.data.map((post) => ({ id: String(post.id) }));
+  } catch (error) {
+    console.error('Error generating static params:', error);
+    return [];
+  }
 }
 
 // This function fetches data for a specific post
 async function getPost(id) {
-  const res = await fetch(`${NEXT_PUBLIC_URL}post/${id}`);
-  if (!res.ok) {
-    throw new Error('Failed to fetch post');
+  try {
+    const res = await fetch(`${NEXT_PUBLIC_URL}items/Blog/${id}`);
+    if (!res.ok) throw new Error('Failed to fetch post');
+    return res.json();
+  } catch (error) {
+    console.error('Error fetching post:', error);
+    return { data: null }; // Return an empty data object in case of error
   }
-  return res.json();
 }
 
 export default async function PostDetail({ params }) {
-  const post = await getPost(params.id);
+  const { id } = params;
+  const { data } = await getPost(id);
 
+  if (!data) {
+    return <p>Post not found.</p>;
+  }
+
+  const post = data;
+  
   return (
     <article className={styles.container}>
       <header className={styles.header}>
         <h1>{post.title}</h1>
         <div className={styles.meta}>
-          <span className={styles.author}>{post.author.username}</span>
+          {/* <span className={styles.author}>{post.author.username}</span> */}
           <span className={styles.date}>
-            {new Date(post.createdAt).toLocaleDateString()}
+            {new Date(post.date_created).toLocaleDateString()}
           </span>
         </div>
       </header>
@@ -44,7 +57,8 @@ export default async function PostDetail({ params }) {
         height={420}
         className={styles.coverImage}
       />
-      <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.content }} />
+        <ReactMarkdown>{post.text}</ReactMarkdown>
+      <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.text }} />
     </article>
   );
 }
