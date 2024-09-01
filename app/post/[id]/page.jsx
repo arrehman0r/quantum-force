@@ -51,13 +51,13 @@ export default async function PostDetail({ params }) {
         </div>
       </header>
       <Image
-        src={`${NEXT_PUBLIC_URL}${post.cover}`}
+         src={`${NEXT_PUBLIC_URL}assets/${post.cover}`}
         alt={post.title}
         width={1000}
         height={420}
         className={styles.coverImage}
       />
-        <ReactMarkdown>{post.text}</ReactMarkdown>
+       
       <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.text }} />
     </article>
   );
