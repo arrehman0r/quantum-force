@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { NEXT_PUBLIC_URL } from '../../../env';
 import styles from './styles.module.scss';
-import ReactMarkdown from 'react-markdown';
+import Markdown from 'markdown-to-jsx'
 // This function generates the static params for all posts
 export async function generateStaticParams() {
   try {
@@ -57,8 +57,8 @@ export default async function PostDetail({ params }) {
         height={420}
         className={styles.coverImage}
       />
-       
-      <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.text }} />
+       <Markdown>{post.text}</Markdown>
+      {/* <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.text }} /> */}
     </article>
   );
 }
