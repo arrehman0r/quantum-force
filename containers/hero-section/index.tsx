@@ -19,8 +19,8 @@ const HeroSection: FC<HeroSectionProps> = ({  }) => {
             <p>StackNex Lab is a dynamic and innovative software agency that has been at the forefront of digital solutions. With a team of experienced professionals, we are dedicated to delivering cutting-edge solutions that drive business growth and success. </p>
         </div>
         <div className={styles.heroSection__inner__buttons}>
-          <Link href={'#contact'}>
-            <PrimaryButton text='Hire Us'/>
+          <Link href={'https://wa.link/vmw0hs'}>
+            <PrimaryButton text='Contact Us'/>
           </Link>
           <Link href={'#projects'}>
             <PrimaryButton text='View Portfolio' style='white'/>
