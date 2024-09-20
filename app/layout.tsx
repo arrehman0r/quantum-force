@@ -7,9 +7,9 @@ import Footer from "@/components/Footer"
 
 
 export const metadata: Metadata = {
-  title: 'Quantum Force',
-  description: 'Agency Website Landing Page | Mert Enercan',
-  openGraph:{images:['https://raw.githubusercontent.com/mertthesamael/canvas-lancer/master/_assets/logo.png']}
+  title: 'StackNex Lab',
+  description: 'Center of Digital Solutions',
+  openGraph:{images:['#']}
 }
 
 export default function RootLayout({
