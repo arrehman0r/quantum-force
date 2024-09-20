@@ -15,7 +15,7 @@ const Header: FC<HeaderProps> = ({  }) => {
         <div className={styles.header__inner}>
             <div className={styles.header__inner__logo}>
                 <Logo />
-                <h1>Quantum <span>Force</span></h1>
+                <h1>StackNex <span>Lab</span></h1>
             </div>
             <nav className={styles.header__inner__nav}>
                 {HeaderNavs.map((el, _i) => <Link key={_i} href={el.href}>{el.text}</Link>)}

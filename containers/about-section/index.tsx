@@ -30,12 +30,12 @@ const AboutSection: FC<AboutSectionProps> = ({}) => {
         </div>
         <div className={styles.aboutSection__inner__content}>
           <div className={styles.aboutSection__inner__title}>
-            <SectionTitle theme="dark" text="About Quantum Force" highlight="About" />
+            <SectionTitle theme="dark" text="About StackNex Lab" highlight="About" />
           </div>
           <div className={styles.aboutSection__inner__content__info}>
             <div className={styles.aboutSection__inner__content__info__title}>
               <h1>
-                Introduction To Best <span>Software House</span>{" "}
+                Introduction {" "}
               </h1>
             </div>
             <div className={styles.aboutSection__inner__content__info__desc}>

@@ -14,9 +14,9 @@ const HeroSection: FC<HeroSectionProps> = ({  }) => {
         <Image src={herobg} alt='Hero Bg' fill style={{objectFit:'cover'}}/>
         <div className={styles.heroSection__inner}>
         <div className={styles.heroSection__inner__welcomeText}>
-            <h4>Welcome To <span> Quantum Force</span></h4>
-            <h1>Redefining  Innovations</h1>
-            <p>Providing AI-powered solutions and services to the world’s leading businesses to redefine their objectives with automation and innovation.</p>
+            <h4>Welcome To <span> StackNex Lab</span></h4>
+            <h1>Center of Digital Solutions</h1>
+            <p>StackNex Lab is a dynamic and innovative software agency that has been at the forefront of digital solutions. With a team of experienced professionals, we are dedicated to delivering cutting-edge solutions that drive business growth and success. </p>
         </div>
         <div className={styles.heroSection__inner__buttons}>
           <Link href={'#contact'}>

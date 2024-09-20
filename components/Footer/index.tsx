@@ -17,11 +17,10 @@ const Footer: FC<FooterProps> = ({  }) => {
         <div className={styles.footer__inner__brand}>
             <div className={styles.footer__inner__brand__name}>
                 <Logo />
-                <h1>Quantum <span>Force</span></h1>
+                <h1>STACKNEX <span>LAB</span></h1>
             </div>
             <div className={styles.footer__inner__brand__desc}>
-                <p>We value long-term business relationships,
-                and we’re guessing you do too. </p>
+                <p>Center of Digital Solutions </p>
             </div>
             <div className={styles.footer__inner__brand__socials}>
                 {Socials.map((el, _i) => <FooterIconFrame key={_i} icon={el.icon()}/>)}
@@ -44,7 +43,7 @@ const Footer: FC<FooterProps> = ({  }) => {
      </div>
      <div className={styles.footer__banner}>
         <div className={styles.footer__banner__inner}>
-            <p>Copyright ⓒ Quantum Force, 2023. All rights reserved.</p>
+            <p>Copyright ⓒ StackNex Lab, 2024. All rights reserved.</p>
             <div className={styles.footer__banner__inner__links}>
                 {FooterBannerNavs.map((el, _i) => <Link href={el.href} key={_i}>{el.text}</Link>)}
             </div>
