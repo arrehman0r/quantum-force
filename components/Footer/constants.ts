@@ -16,11 +16,10 @@ export const FooterNavs : FooterNavs[] = [
     id: 1,
     title: "Services",
     navs: [
-      { id: 1, text: "Website Dev", href: "/"},
-      { id: 2, text: "Mobile Dev", href: "/"},
-      { id: 3, text: "Digital Marketing", href: "/"},
-      { id: 3, text: "AI/ML Solutions", href: "/"}
-      { id: 3, text: "Ecommerce Management", href: "/"}
+      { id: 1, text: "UI/UX", href: "/"},
+      { id: 2, text: "Website Dev", href: "/"},
+      { id: 3, text: "Mobile Dev", href: "/"},
+      { id: 3, text: "AI", href: "/"}
     ],
   },
   {
