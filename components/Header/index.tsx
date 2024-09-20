@@ -21,7 +21,7 @@ const Header: FC<HeaderProps> = ({  }) => {
                 {HeaderNavs.map((el, _i) => <Link key={_i} href={el.href}>{el.text}</Link>)}
             </nav>
             <div className={styles.header__inner__button}>
-                <Link href={'https://wa.link/vmw0hs'}>
+                <Link href={'https://www.linkedin.com/company/stacknexlab/'}>
                     <PrimaryButton text='Contact Us'/>
                 </Link>
             </div>

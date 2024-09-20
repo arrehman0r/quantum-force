@@ -8,19 +8,32 @@ export const Filters = [
     },
     {
         id:2,
-        name:'UI/UX'
+        name:'WordPress'
     },
     {
         id:3,
-        name:'Development'
+        name:'Shopify'
     },
+    
     {
         id:4,
-        name:'Mobile Development'
+        name:'React Js'
     },
     {
         id:5,
-        name:'AI'
+        name:'APP Development'
+    },
+    {
+        id:6,
+        name:'Webflow'
+    },
+    {
+        id:7,
+        name:'UI/UX Design'
+    },
+    {
+        id:8,
+        name:'Our Products'
     },
 ]
 

@@ -16,7 +16,7 @@ const Footer: FC<FooterProps> = ({  }) => {
      <div className={styles.footer__inner}>
         <div className={styles.footer__inner__brand}>
             <div className={styles.footer__inner__brand__name}>
-                <Logo />
+                
                 <h1>STACKNEX <span>LAB</span></h1>
             </div>
             <div className={styles.footer__inner__brand__desc}>

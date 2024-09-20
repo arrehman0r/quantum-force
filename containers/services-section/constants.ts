@@ -5,26 +5,26 @@ import { DevelopmentIcon, MobileIcon, SeoIcon, UiIcon } from "@/components/Icons
 export const Services = [
     {
         id:1,
-        title:"UI/UX",
-        desc:"Crafting intuitive interfaces and seamless user experiences that delight and engage.",
+        title:"CMS Development",
+        desc:"Building responsive, high-performance websites include: WordPress, Shopify, Weebly, Webflow",
         img:UiIcon
     },
     {
         id:2,
-        title:"Development",
-        desc:" Building responsive, high-performance websites that drive your online presence.",
+        title:"Custom Development",
+        desc:" Developing responsive, high-performance websites include: React JS, Next JS, Node JS, PHP",
         img:DevelopmentIcon
     },
     {
         id:3,
         title:"Mobile Development",
-        desc:"Creating powerful, user-friendly mobile apps for iOS and Android platforms.",
+        desc:"Creating powerful, user-friendly mobile apps for iOS and Android platforms. Tech: React Native",
         img:MobileIcon
     },
     {
         id:4,
-        title:"AI Solutions:",
-        desc:"Harnessing cutting-edge AI to automate processes and drive data-driven decisions.",
+        title:"ML Solutions:",
+        desc:"Harnessing cutting-edge ML to automate processes and drive data-driven decisions. Tech: ML, AI, Python, Automation",
         img:SeoIcon
     },
 ]

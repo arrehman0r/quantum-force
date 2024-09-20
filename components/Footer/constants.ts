@@ -19,17 +19,17 @@ export const FooterNavs : FooterNavs[] = [
       { id: 1, text: "UI/UX", href: "/"},
       { id: 2, text: "Website Dev", href: "/"},
       { id: 3, text: "Mobile Dev", href: "/"},
-      { id: 3, text: "AI", href: "/"}
+      { id: 4, text: "Digital Marketing", href: "/"}
     ],
   },
   {
     id: 2,
-    title: "Resources",
+    title: "Trainings",
     navs: [
-      { id: 1, text: "Compliance", href: "/"},
-      { id: 2, text: "Case Studies", href: "/"},
-      { id: 3, text: "Webinars", href: "/"},
-      { id: 3, text: "Developers", href: "/"}
+      { id: 3, text: "WordPress", href: "https://wa.link/zip380"},
+      { id: 3, text: "Shopify", href: "https://wa.link/zip380"},
+      { id: 3, text: "React JS", href: "https://wa.link/zip380"},
+      { id: 3, text: "Daraz", href: "https://wa.link/zip380"},
     ],
   }
 ];
@@ -65,12 +65,12 @@ export const Contacts = [
         value:'stacknexlab@gmail.com',
         icon:Mail()
     },
-    // {
-    //     id:2,
-    //     type:'Phone',
-    //     value:'+31 331 31 31',
-    //     icon:Phone()
-    // },
+     {
+        id:2,
+        type:'Phone',
+        value:'+92 325 5380150',
+        icon:Phone()
+     },
     {
         id:3,
         type:'Location',
@@ -81,19 +81,5 @@ export const Contacts = [
 
 
 export const FooterBannerNavs : Nav[] = [
-    {
-        id:1,
-        text:"Website Terms",
-        href:'/'
-    },
-    {
-        id:2,
-        text:"Privacy Policy",
-        href:'/'
-    },
-    {
-        id:3,
-        text:"Cookies Policy",
-        href:'/'
-    },
+    
 ]

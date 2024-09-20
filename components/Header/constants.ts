@@ -7,26 +7,26 @@ export const HeaderNavs = [
     {
         id:2,
         text:'About',
-        href:'/about'
+        href:'/'
     },
     {
         id:3,
         text:'Services',
-        href:'/services'
+        href:'/'
     },
     {
         id:4,
         text:'Portfolio',
-        href:'/blog'
+        href:'/'
     },
     {
         id:5,
         text:'Testimonials',
-        href:'/testimonials'
+        href:'/'
     },
     {
         id:6,
         text:'Faqs',
-        href:'/faq'
+        href:'/'
     },
 ]

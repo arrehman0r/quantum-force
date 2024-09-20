@@ -35,21 +35,21 @@ const AboutSection: FC<AboutSectionProps> = ({}) => {
           <div className={styles.aboutSection__inner__content__info}>
             <div className={styles.aboutSection__inner__content__info__title}>
               <h1>
-                Introduction {" "}
+                About Us {" "}
               </h1>
             </div>
             <div className={styles.aboutSection__inner__content__info__desc}>
               <p>
-            We are expert digital product developers serving businesses of all sizes. Our reputation is built on reliability and excellence in engineering apps, websites, mobile solutions, widgets, e-commerce platforms, and enterprise portals. We stand behind every product we create, offering lifetime support for our high-quality work. Our commitment: delivering dependable digital solutions that drive your business forward.
+              At StackNex Lab, we offer a comprehensive suite of services tailored to meet the unique needs of our clients. Our expertise spans across various digital domains, ensuring that we can provide comprehensive solutions for your business.
+
                 <br />
                 <br />
-                Cutting-edge digital solutions: From concept to launch
                 We create robust apps, dynamic websites, and innovative digital products. Our full-service approach covers every step, ensuring seamless development and delivery.
               </p>
             </div>
             <div className={styles.aboutSection__inner__content__info__button}>
-              <Link href={'#contact'}>
-                <PrimaryButton text="Hire Us" />
+              <Link href={'https://wa.link/zip380'}>
+                <PrimaryButton text="Lets Chat" />
               </Link>
             </div>
           </div>

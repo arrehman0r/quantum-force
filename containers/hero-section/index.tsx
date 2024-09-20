@@ -20,9 +20,9 @@ const HeroSection: FC<HeroSectionProps> = ({  }) => {
         </div>
         <div className={styles.heroSection__inner__buttons}>
           <Link href={'https://wa.link/vmw0hs'}>
-            <PrimaryButton text='Contact Us'/>
+            <PrimaryButton text='Lets Discuss'/>
           </Link>
-          <Link href={'#projects'}>
+          <Link href={'https://www.instagram.com/stacknexlab/'}>
             <PrimaryButton text='View Portfolio' style='white'/>
           </Link>
         </div>
