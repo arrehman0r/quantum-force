@@ -39,6 +39,7 @@ export default async function PostDetail({ params }) {
 
   const post = data;
   
+  
   return (
     <article className={styles.container}>
       <header className={styles.header}>
