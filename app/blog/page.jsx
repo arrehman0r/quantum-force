@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 import { NEXT_PUBLIC_URL } from '../../env';
 
 export default async function PostList() {
-  const res = await fetch(`${NEXT_PUBLIC_URL}items/Blog/`);
+  const res = await fetch(`${NEXT_PUBLIC_URL}items/projects/`);
   const posts = await res.json();
   console.log("res of blogs", posts)
   if (!posts || posts.length === 0) {

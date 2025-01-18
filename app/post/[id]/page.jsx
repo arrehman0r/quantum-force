@@ -5,10 +5,10 @@ import Markdown from 'markdown-to-jsx'
 // This function generates the static params for all posts
 export async function generateStaticParams() {
   try {
-    const res = await fetch(`${NEXT_PUBLIC_URL}items/Blog/`);
+    const res = await fetch(`${NEXT_PUBLIC_URL}items/projects`);
     if (!res.ok) throw new Error('Failed to fetch posts');
     const posts = await res.json();
-    
+    console.log("posts are ", posts)
     // Ensure id is a string
     return posts.data.map((post) => ({ id: String(post.id) }));
   } catch (error) {
@@ -20,7 +20,8 @@ export async function generateStaticParams() {
 // This function fetches data for a specific post
 async function getPost(id) {
   try {
-    const res = await fetch(`${NEXT_PUBLIC_URL}items/Blog/${id}`);
+    const res = await fetch(`${NEXT_PUBLIC_URL}items/projects/${id}`);
+    console.log("res from id ", res)
     if (!res.ok) throw new Error('Failed to fetch post');
     return res.json();
   } catch (error) {
@@ -32,9 +33,9 @@ async function getPost(id) {
 export default async function PostDetail({ params }) {
   const { id } = params;
   const { data } = await getPost(id);
-
+console.log("Data is 0", data)
   if (!data) {
-    return <p>Post not found.</p>;
+    return <p style={{margin: '100px'}}>Post not found.</p>;
   }
 
   const post = data;
@@ -58,8 +59,8 @@ export default async function PostDetail({ params }) {
         height={420}
         className={styles.coverImage}
       />
-       <Markdown>{post.text}</Markdown>
-      {/* <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.text }} /> */}
+       {/* <Markdown>{post.body}</Markdown> */}
+      <div className={styles.content} dangerouslySetInnerHTML={{ __html: post.body }} />
     </article>
   );
 }

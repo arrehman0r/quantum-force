@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = { images: {
-  domains: ['api.al-mizan.store'],
+  domains: ['203.161.43.125'],
   }}
 
 module.exports = nextConfig

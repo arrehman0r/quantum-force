@@ -1,1 +1,1 @@
-export const NEXT_PUBLIC_URL = "https://api.al-mizan.store/"
+export const NEXT_PUBLIC_URL = "http://203.161.43.125:8055/"
