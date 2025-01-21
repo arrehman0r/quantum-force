@@ -18,7 +18,7 @@ export default async function PostPage({ params }) {
             dangerouslySetInnerHTML={{ __html: post.title.rendered }} 
           />
           
-          {post._embedded?.["wp:featuredmedia"] && (
+          {/* {post._embedded?.["wp:featuredmedia"] && (
             <Image
               className="rounded-lg mb-6"
               src={post._embedded["wp:featuredmedia"][0].source_url}
@@ -27,7 +27,7 @@ export default async function PostPage({ params }) {
               height={475}
               priority
             />
-          )}
+          )} */}
 
           <div 
             className="prose max-w-none"

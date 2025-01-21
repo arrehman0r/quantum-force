@@ -9,7 +9,7 @@
     "logo_text": "Quantum Force"
   },
   "settings": {
-    "pagination": 3,
+    "pagination": 8,
     "summary_length": 200,
     "blog_folder": "posts"
   },
