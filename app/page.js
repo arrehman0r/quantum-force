@@ -1,3 +1,16 @@
-import BlogPagination, { generateStaticParams } from "./page/[slug]/page";
-export { generateStaticParams };
-export default BlogPagination;
+import Hero from "@layouts/partials/Hero"
+import Services from "@layouts/partials/Services"
+
+const Home = () => {
+
+    return (
+
+        <>
+            <Hero />
+            <Services />
+        </>
+
+    )
+}
+
+export default Home 

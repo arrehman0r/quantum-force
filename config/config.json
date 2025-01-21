@@ -1,28 +1,25 @@
 {
   "site": {
-    "title": "Bookworm Next | Personal Blog Theme",
+    "title": "Quantum Force",
     "base_url": "/",
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_width": "200",
     "logo_height": "34",
-    "logo_text": "Bookworm Light"
+    "logo_text": "Quantum Force"
   },
-
   "settings": {
     "pagination": 3,
     "summary_length": 200,
     "blog_folder": "posts"
   },
-
   "params": {
     "tag_manager_id": "",
     "contact_form_action": "#",
-    "copyright": "Copyright © 2022 a theme by [themefisher](https://themefisher.com)"
+    "copyright": "Copyright © 2025 [Quantum Force](https://quantumfore.dev)"
   },
-
   "metadata": {
-    "meta_author": "Themefisher",
+    "meta_author": "Quantum Force",
     "meta_image": "/images/og-image.png",
     "meta_description": "Next Boilerplate"
   }
