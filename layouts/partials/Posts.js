@@ -1,7 +1,8 @@
 // Posts.jsx
+import { dateFormat } from "@lib/utils/dateFormat";
 import Image from "next/image";
 import Link from "next/link";
-// import { formatDate } from "@lib/utils/dateFomat";
+
 
 const Posts = ({ posts, className }) => {
 
@@ -43,7 +44,7 @@ const Posts = ({ posts, className }) => {
                 </Link>
               </li>
             )}
-            <li>{post.date}</li>
+            <li>{dateFormat(post.date)}</li>
             <li>
               {post._embedded?.["wp:term"] && (
                 <ul>

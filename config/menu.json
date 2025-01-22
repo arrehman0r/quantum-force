@@ -9,6 +9,14 @@
       "url": "/projects"
     },
     {
+      "name": "Blogs",
+      "url": "/blogs"
+    },
+    {
+      "name": "Services",
+      "url": "/services"
+    },
+    {
       "name": "About",
       "url": "/about"
     },
