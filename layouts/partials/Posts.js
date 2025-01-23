@@ -24,7 +24,8 @@ const Posts = ({ posts, className }) => {
               priority={i === 0 ? true : false}
             />
           )}
-          <ul className="mb-4 mt-4 flex flex-wrap items-center space-x-3 text-text">
+          <div className="mb-4 mt-4"/>
+          {/* <ul className="mb-4 mt-4 flex flex-wrap items-center space-x-3 text-text">
             {post._embedded?.["author"] && (
               <li>
                 <Link
@@ -61,7 +62,7 @@ const Posts = ({ posts, className }) => {
                 </ul>
               )}
             </li>
-          </ul>
+          </ul> */}
           <h3 className="mb-2">
             <Link
               href={`/post/${post.slug}`}
