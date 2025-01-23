@@ -4,16 +4,17 @@ import Logo from "@components/Logo";
 import menu from "@config/menu.json";
 import SearchModal from "@layouts/partials/SearchModal";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 
 const Header = () => {
-  // distructuring the main menu from menu object
   const { main } = menu;
-
-  // states declaration
+  const pathname = usePathname();
+  
   const [navFixed, setNavFixed] = useState(false);
   const [searchModal, setSearchModal] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   useEffect(() => {
     const changeNavbarBackground = () => {
@@ -26,6 +27,16 @@ const Header = () => {
     window.addEventListener("scroll", changeNavbarBackground);
   });
 
+  const handleNavClick = () => {
+    setIsNavOpen(false);
+    const navToggle = document.getElementById("nav-toggle");
+    if (navToggle) navToggle.checked = false;
+  };
+
+  const isActive = (url) => {
+    return pathname === url;
+  };
+
   return (
     <>
       <header
@@ -34,12 +45,16 @@ const Header = () => {
         }`}
       >
         <nav className="navbar container">
-          {/* logo */}
           <div className="order-0">
             <Logo />
           </div>
-          {/* navbar toggler */}
-          <input id="nav-toggle" type="checkbox" className="hidden" />
+          
+          <input 
+            id="nav-toggle" 
+            type="checkbox" 
+            className="hidden"
+            onChange={(e) => setIsNavOpen(e.target.checked)}
+          />
           <label
             id="show-button"
             htmlFor="nav-toggle"
@@ -63,11 +78,12 @@ const Header = () => {
               />
             </svg>
           </label>
-          {/* /navbar toggler */}
 
           <ul
             id="nav-menu"
-            className="navbar-nav order-3 hidden w-full md:order-1 md:flex md:w-auto md:space-x-2"
+            className={`navbar-nav order-3 w-full md:order-1 md:flex md:w-auto md:space-x-2 ${
+              isNavOpen ? "block" : "hidden"
+            } md:block`}
           >
             {main.map((menu, i) => (
               <React.Fragment key={`menu-${i}`}>
@@ -84,7 +100,10 @@ const Header = () => {
                         <li className="nav-dropdown-item" key={`children-${i}`}>
                           <Link
                             href={child.url}
-                            className="nav-dropdown-link block"
+                            className={`nav-dropdown-link block ${
+                              isActive(child.url) ? "text-primary" : ""
+                            }`}
+                            onClick={handleNavClick}
                           >
                             {child.name}
                           </Link>
@@ -94,7 +113,13 @@ const Header = () => {
                   </li>
                 ) : (
                   <li className="nav-item">
-                    <Link href={menu.url} className="nav-link block">
+                    <Link 
+                      href={menu.url} 
+                      className={`nav-link block ${
+                        isActive(menu.url) ? "text-primary" : ""
+                      }`}
+                      onClick={handleNavClick}
+                    >
                       {menu.name}
                     </Link>
                   </li>

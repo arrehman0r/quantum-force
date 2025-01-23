@@ -20,12 +20,12 @@ const Hero = () => {
                         Providing AI-powered solutions and services to the world's leading businesses to redefine their objectives with automation and innovation.
                     </h1>
                     <div className="px-8 sm:items-start sm:justify-center sm:px-0 sm:space-x-5 sm:flex mt-9 pb-12 md:pb-16">
-                        <a href="#" title=""
+                        <a href="/contact" title=""
                             className="mb-3 sm:mb-0 inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-gray-900 border-2 border-transparent sm:w-auto rounded-xl hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                             role="button">
                             Contact us
                         </a>
-                        <a href="#"
+                        <a href="/contact"
                             className="inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold text-gray-900 hover:text-white transition-all duration-200 bg-gray-100 border-2 border-gray-900 sm:w-auto rounded-xl hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                             role="button">
                             Book a demo
