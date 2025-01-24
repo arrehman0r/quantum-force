@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from "react";
 import { markdownify } from "@lib/utils/textConverter";
+import SeoMeta from "@layouts/partials/SeoMeta";
 
 
 const Contact = () => {
@@ -37,84 +38,91 @@ const Contact = () => {
   };
 
   return (
-    <section className="section">
-      <div className="container max-w-[700px]">
-        {markdownify("Contact Quantum Force", "h1", "h2 mb-8 text-center")}
-        <form
-          className="contact-form"
-          method="POST"
-          onSubmit={handleSubmit}
-        >
-          <div className="mb-6">
-            <label className="mb-2 block" htmlFor="name">
-              Name
-            </label>
-            <input
-              className="form-input w-full"
-              name="name"
-              type="text"
-              required
-              disabled={submitting}
-            />
-          </div>
-          <div className="mb-6">
-            <label className="mb-2 block" htmlFor="email">
-              Email
-            </label>
-            <input
-              className="form-input w-full"
-              name="email"
-              type="email"
-              required
-              disabled={submitting}
-            />
-          </div>
-          <div className="mb-6">
-            <label className="mb-2 block" htmlFor="subject">
-              Subject
-            </label>
-            <input
-              className="form-input w-full"
-              name="subject"
-              type="text"
-              required
-              disabled={submitting}
-            />
-          </div>
-          <div className="mb-6">
-            <label className="mb-2 block" htmlFor="message">
-              Message
-            </label>
-            <textarea
-              className="form-textarea w-full"
-              name="message"
-              rows="7"
-              required
-              disabled={submitting}
-            />
-          </div>
 
-          {submitStatus === 'success' && (
-            <div className="mb-4 text-green-600">
-              Message sent successfully!
-            </div>
-          )}
+    <>
 
-          {submitStatus === 'error' && (
-            <div className="mb-4 text-red-600">
-              Error sending message. Please try again.
-            </div>
-          )}
+      <SeoMeta title="Quantum Force | Contact Us" />
 
-          <button
-            className={`btn btn-outline-primary ${submitting ? 'opacity-50 cursor-not-allowed' : ''}`}
-            disabled={submitting}
+      <section className="section">
+        <div className="container max-w-[700px]">
+          {markdownify("Contact Quantum Force", "h1", "h2 mb-8 text-center")}
+          <form
+            className="contact-form"
+            method="POST"
+            onSubmit={handleSubmit}
           >
-            {submitting ? 'Sending...' : 'Submit Now'}
-          </button>
-        </form>
-      </div>
-    </section>
+            <div className="mb-6">
+              <label className="mb-2 block" htmlFor="name">
+                Name
+              </label>
+              <input
+                className="form-input w-full"
+                name="name"
+                type="text"
+                required
+                disabled={submitting}
+              />
+            </div>
+            <div className="mb-6">
+              <label className="mb-2 block" htmlFor="email">
+                Email
+              </label>
+              <input
+                className="form-input w-full"
+                name="email"
+                type="email"
+                required
+                disabled={submitting}
+              />
+            </div>
+            <div className="mb-6">
+              <label className="mb-2 block" htmlFor="subject">
+                Subject
+              </label>
+              <input
+                className="form-input w-full"
+                name="subject"
+                type="text"
+                required
+                disabled={submitting}
+              />
+            </div>
+            <div className="mb-6">
+              <label className="mb-2 block" htmlFor="message">
+                Message
+              </label>
+              <textarea
+                className="form-textarea w-full"
+                name="message"
+                rows="7"
+                required
+                disabled={submitting}
+              />
+            </div>
+
+            {submitStatus === 'success' && (
+              <div className="mb-4 text-green-600">
+                Message sent successfully!
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="mb-4 text-red-600">
+                Error sending message. Please try again.
+              </div>
+            )}
+
+            <button
+              className={`btn btn-outline-primary ${submitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+              disabled={submitting}
+            >
+              {submitting ? 'Sending...' : 'Submit Now'}
+            </button>
+          </form>
+        </div>
+      </section>
+
+    </>
   );
 };
 

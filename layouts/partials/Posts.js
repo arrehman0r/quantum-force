@@ -1,12 +1,8 @@
-// Posts.jsx
 import { dateFormat } from "@lib/utils/dateFormat";
 import Image from "next/image";
 import Link from "next/link";
 
-
 const Posts = ({ posts, className }) => {
-
-  console.log("posts from post are ", posts)
   return (
     <div className={`row space-y-16 ${className}`}>
       {posts.map((post, i) => (
@@ -15,17 +11,42 @@ const Posts = ({ posts, className }) => {
           className={i === 0 ? "col-12" : "col-12 sm:col-6"}
         >
           {post._embedded?.["wp:featuredmedia"] && (
-            <Image
-              className="rounded-lg"
-              src={post._embedded["wp:featuredmedia"][0].source_url}
-              alt={post.title.rendered}
-              width={i === 0 ? "925" : "445"}
-              height={i === 0 ? "475" : "230"}
-              priority={i === 0 ? true : false}
-            />
+            <div className={`relative ${i === 0 ? 'h-[475px]' : 'h-[230px]'} w-full overflow-hidden rounded-lg`}>
+              <Image
+                className="object-cover"
+                src={post._embedded["wp:featuredmedia"][0].source_url}
+                alt={post.title.rendered}
+                fill
+                sizes={i === 0 ? "925px" : "445px"}
+                priority={i === 0}
+              />
+            </div>
           )}
-          <div className="mb-4 mt-4"/>
-          {/* <ul className="mb-4 mt-4 flex flex-wrap items-center space-x-3 text-text">
+          <div className="mb-4 mt-4" />
+          <h3 className="mb-2">
+            <Link
+              href={`/post/${post.slug}`}
+              className="block hover:text-primary"
+              dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+            />
+          </h3>
+          <div
+            className="text-text"
+            dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+          />
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Posts;
+
+
+
+
+
+{/* <ul className="mb-4 mt-4 flex flex-wrap items-center space-x-3 text-text">
             {post._embedded?.["author"] && (
               <li>
                 <Link
@@ -51,7 +72,7 @@ const Posts = ({ posts, className }) => {
                 <ul>
                   {post._embedded["wp:term"][0].map((category, i) => (
                     <li className="inline-block" key={`category-${i}`}>
-                      <Link
+                      <
                         href={`/categories/${category.slug}`}
                         className="mr-3 hover:text-primary"
                       >
@@ -63,21 +84,3 @@ const Posts = ({ posts, className }) => {
               )}
             </li>
           </ul> */}
-          <h3 className="mb-2">
-            <Link
-              href={`/post/${post.slug}`}
-              className="block hover:text-primary"
-              dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-            />
-          </h3>
-          <div
-            className="text-text"
-            dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-          />
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default Posts;

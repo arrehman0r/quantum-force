@@ -7,36 +7,45 @@ import {
     ServerCog,
     Workflow, // or Workflow, depending on which icon you prefer
 } from 'lucide-react';
+import Link from 'next/link';
 const Services = () => {
     const services = [
         {
             icon: <Code2 className="h-12 w-12" />,
             title: "Mobile App Development",
+            link: "post/mobile-app-development",
             description: "Native and cross-platform mobile applications with cutting-edge features and seamless user experience."
         },
         {
             icon: <Globe className="h-12 w-12" />,
             title: "Website Development",
+            link: "/post/web-development",
             description: "Responsive websites and progressive web apps using modern frameworks and best practices."
         },
         {
             icon: <ShoppingCart className="h-12 w-12" />,
             title: "E-commerce Solutions",
+            link: "/post/web-development",
+
             description: "Custom e-commerce platforms with secure payment integration, inventory management, and analytics."
         },
         {
             icon: <Database className="h-12 w-12" />,
             title: "Data Analytics & AI",
+            link: "/post/web-development",
+
             description: "Data-driven solutions leveraging machine learning and analytics for business intelligence."
         },
         {
             icon: <ServerCog className="h-12 w-12" />,
             title: "Development Operation",
+            link: "/post/devops",
             description: "Continuous integration, deployment automation, and cloud infrastructure management."
         },
         {
             icon: <Workflow className="h-12 w-12" />,
             title: "Custom Software Solutions",
+            link: "post/custom-software-solutions",
             description: "Tailored software solutions designed to meet your specific business requirements and goals."
         }
     ];
@@ -52,15 +61,17 @@ const Services = () => {
 
             <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
                 {services.map((service, index) => (
-                    <div key={index} className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2">
-                        <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-                            {service.icon}
-                            <div className="space-y-2">
-                                <h3 className="font-bold">{service.title}</h3>
-                                <p className="text-sm text-muted-foreground">{service.description}</p>
+                    <Link href={service?.link}>
+                        <div key={index} className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-teal-200 p-2">
+                            <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
+                                {service.icon}
+                                <div className="space-y-2">
+                                    <h3 className="font-bold">{service.title}</h3>
+                                    <p className="text-sm text-muted-foreground">{service.description}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </section>

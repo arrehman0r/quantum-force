@@ -20,7 +20,7 @@ console.log("currentPosts are ", currentPosts)
 
   return (
     <>
-      <SeoMeta title="Blog" />
+      <SeoMeta title="Quantum Force | Projects" />
       <section className="section">
         <div className="container">
           <Posts className="mb-16" posts={currentPosts} />
