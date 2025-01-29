@@ -12,16 +12,11 @@ const Services = () => {
     const services = [
         {
             icon: <Code2 className="h-12 w-12" />,
-            title: "Mobile App Development",
+            title: "Mobile & Web Apps",
             link: "post/mobile-app-development",
             description: "Native and cross-platform mobile applications with cutting-edge features and seamless user experience."
         },
-        {
-            icon: <Globe className="h-12 w-12" />,
-            title: "Website Development",
-            link: "/post/web-development",
-            description: "Responsive websites and progressive web apps using modern frameworks and best practices."
-        },
+
         {
             icon: <ShoppingCart className="h-12 w-12" />,
             title: "E-commerce Solutions",
@@ -43,10 +38,16 @@ const Services = () => {
             description: "Continuous integration, deployment automation, and cloud infrastructure management."
         },
         {
-            icon: <Workflow className="h-12 w-12" />,
-            title: "Custom Software Solutions",
+            icon: <Workflow className="h-8 w-8" />,
+            title: "UI/UX Designing",
             link: "post/custom-software-solutions",
-            description: "Tailored software solutions designed to meet your specific business requirements and goals."
+            description: "Research-driven design creating intuitive & engaging user experiences."
+        },
+        {
+            icon: <Workflow className="h-8 w-8" />,
+            title: "Amazon PPC Automation",
+            link: "post/custom-software-solutions",
+            description: "Smart PPC optimization for maximum ROAS & marketplace growth."
         }
     ];
 
