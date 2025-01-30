@@ -45,8 +45,8 @@ const Services = () => {
         },
         {
             icon: <Workflow className="h-8 w-8" />,
-            title: "Amazon PPC Automation",
-            link: "post/custom-software-solutions",
+            title: "Amazon A-Z",
+            link: "post/our-amazon-services",
             description: "Smart PPC optimization for maximum ROAS & marketplace growth."
         }
     ];
