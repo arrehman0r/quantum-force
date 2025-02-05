@@ -7,33 +7,33 @@ const AboutUs = () => {
   return (
     <>
       <SeoMeta title="Quantum Force | About Us" />
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#111111]">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">About Quantum Force</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-white">About Quantum Force</h2>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
               Since 2015, we&apos;ve been transforming ideas into powerful digital solutions,
               serving over 200+ clients across 20 countries.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
-            <div className="p-6 bg-slate-50 rounded-lg hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                <Target className="w-6 h-6 text-secondary" />
+            <div className="p-6 bg-[#1A1A1A] border border-[#2A2A2A] rounded-lg hover:shadow-lg transition-shadow">
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-white">
+                <Target className="w-6 h-6 text-[#01AD9F]" />
                 Our Mission
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-400">
                 To empower businesses through innovative software solutions that drive
                 growth and create lasting impact in the digital landscape.
               </p>
             </div>
-            <div className="p-6 bg-slate-50 rounded-lg hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-                <Medal className="w-6 h-6 text-secondary" />
+            <div className="p-6 bg-[#1A1A1A] border border-[#2A2A2A] rounded-lg hover:shadow-lg transition-shadow">
+              <h3 className="text-2xl font-bold mb-4 flex items-center gap-2 text-white">
+                <Medal className="w-6 h-6 text-[#01AD9F]" />
                 Our Vision
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-400">
                 To be the global leader in delivering transformative digital solutions
                 that shape the future of technology and business.
               </p>
@@ -41,8 +41,8 @@ const AboutUs = () => {
           </div>
 
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4">Our Leadership Team</h3>
-            <p className="text-gray-600 mb-8">
+            <h3 className="text-3xl font-bold mb-4 text-white">Our Leadership Team</h3>
+            <p className="text-gray-400 mb-8">
               Backed by decades of combined experience in software development and innovation
             </p>
             <div className="grid md:grid-cols-3 gap-8">
@@ -63,7 +63,7 @@ const AboutUs = () => {
                   image: "/api/placeholder/400/400"
                 }
               ].map((member, index) => (
-                <div key={index} className="text-center bg-slate-50 hover:shadow-xl transition-shadow rounded-lg p-6">
+                <div key={index} className="text-center bg-[#1A1A1A] border border-[#2A2A2A] hover:shadow-xl transition-shadow rounded-lg p-6">
                   <Image
                     src={member.image}
                     alt={member.name}
@@ -71,8 +71,8 @@ const AboutUs = () => {
                     height={128}
                     className="rounded-full mx-auto mb-4 object-cover"
                   />
-                  <h4 className="text-xl font-bold mb-2">{member.name}</h4>
-                  <p className="text-gray-600">{member.role}</p>
+                  <h4 className="text-xl font-bold mb-2 text-white">{member.name}</h4>
+                  <p className="text-gray-400">{member.role}</p>
                 </div>
               ))}
             </div>
@@ -87,11 +87,11 @@ const AboutUs = () => {
             ].map((stat, index) => (
               <div 
                 key={index} 
-                className="p-6 bg-slate-50 rounded-lg hover:shadow-lg transition-shadow"
+                className="p-6 bg-[#1A1A1A] border border-[#2A2A2A] rounded-lg hover:shadow-lg transition-shadow"
                 aria-label={`${stat.number} ${stat.label}`}
               >
-                <h4 className="text-3xl font-bold text-secondary mb-2">{stat.number}</h4>
-                <p className="text-gray-600">{stat.label}</p>
+                <h4 className="text-3xl font-bold text-[#01AD9F] mb-2">{stat.number}</h4>
+                <p className="text-gray-400">{stat.label}</p>
               </div>
             ))}
           </div>

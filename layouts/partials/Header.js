@@ -40,8 +40,8 @@ const Header = () => {
   return (
     <>
       <header
-        className={`sticky top-0 z-50 bg-white py-2 transition-all ${
-          navFixed ? "shadow" : "pt-8 md:pt-16"
+        className={`sticky top-0 z-50 bg-[#111111] py-2 transition-all border-b border-[#2A2A2A] ${
+          navFixed ? "shadow-md shadow-black/20" : "pt-8 md:pt-16"
         }`}
       >
         <nav className="navbar container">
@@ -60,7 +60,7 @@ const Header = () => {
             htmlFor="nav-toggle"
             className="order-2 flex cursor-pointer items-center md:order-1 md:hidden"
           >
-            <svg className="h-6 fill-current" viewBox="0 0 20 20">
+            <svg className="h-6 fill-white" viewBox="0 0 20 20">
               <title>Menu Open</title>
               <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z" />
             </svg>
@@ -70,7 +70,7 @@ const Header = () => {
             htmlFor="nav-toggle"
             className="order-2 hidden cursor-pointer items-center md:order-1"
           >
-            <svg className="h-6 fill-current" viewBox="0 0 20 20">
+            <svg className="h-6 fill-white" viewBox="0 0 20 20">
               <title>Menu Close</title>
               <polygon
                 points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
@@ -89,19 +89,19 @@ const Header = () => {
               <React.Fragment key={`menu-${i}`}>
                 {menu.hasChildren ? (
                   <li className="nav-item nav-dropdown group relative">
-                    <span className="nav-link inline-flex items-center">
+                    <span className="nav-link inline-flex items-center text-gray-300 hover:text-[#01AD9F]">
                       {menu.name}
                       <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                       </svg>
                     </span>
-                    <ul className="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100">
+                    <ul className="nav-dropdown-list hidden group-hover:block md:invisible md:absolute md:block md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 bg-[#1A1A1A] border border-[#2A2A2A] rounded-lg shadow-lg">
                       {menu.children.map((child, i) => (
                         <li className="nav-dropdown-item" key={`children-${i}`}>
                           <Link
                             href={child.url}
                             className={`nav-dropdown-link block ${
-                              isActive(child.url) ? "text-primary" : ""
+                              isActive(child.url) ? "text-[#01AD9F]" : "text-gray-300 hover:text-[#01AD9F]"
                             }`}
                             onClick={handleNavClick}
                           >
@@ -116,7 +116,7 @@ const Header = () => {
                     <Link 
                       href={menu.url} 
                       className={`nav-link block ${
-                        isActive(menu.url) ? "text-primary" : ""
+                        isActive(menu.url) ? "text-[#01AD9F]" : "text-gray-300 hover:text-[#01AD9F]"
                       }`}
                       onClick={handleNavClick}
                     >
@@ -129,7 +129,7 @@ const Header = () => {
           </ul>
           <div className="order-1 ml-auto md:order-2 md:ml-0">
             <div
-              className="cursor-pointer p-2 text-xl text-dark hover:text-primary"
+              className="cursor-pointer p-2 text-xl text-gray-300 hover:text-[#01AD9F]"
               onClick={() => {
                 setSearchModal(true);
               }}

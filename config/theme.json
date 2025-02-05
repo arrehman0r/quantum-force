@@ -3,16 +3,16 @@
     "default": {
       "theme_color": {
         "primary": "#01AD9F",
-        "body": "#fff",
+        "body": "#111111",
         "secondary": "#004aad",
-        "border": "#D5D5D5",
-        "theme_light": "#FAFAFA",
-        "theme_dark": "#152035"
+        "border": "#2A2A2A",
+        "theme_light": "#1A1A1A",
+        "theme_dark": "#000000"
       },
       "text_color": {
-        "default": "#747577",
-        "dark": "#152035",
-        "light": "#a1a5ae"
+        "default": "#CCCCCC",
+        "dark": "#FFFFFF",
+        "light": "#888888"
       }
     }
   },
@@ -27,3 +27,5 @@
     }
   }
 }
+
+

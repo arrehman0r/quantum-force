@@ -69,6 +69,47 @@ module.exports = {
         primary: [fontPrimary, fontPrimaryType],
         secondary: [fontSecondary, fontSecondaryType],
       },
+      // New animations configuration
+      keyframes: {
+        'fade-up': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(20px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          }
+        },
+        'draw': {
+          '0%': {
+            strokeDasharray: '1000',
+            strokeDashoffset: '1000',
+            opacity: '0'
+          },
+          '30%': {
+            opacity: '1'
+          },
+          '100%': {
+            strokeDasharray: '1000',
+            strokeDashoffset: '0',
+            opacity: '1'
+          }
+        },
+        'pulse-soft': {
+          '0%, 100%': {
+            opacity: '1'
+          },
+          '50%': {
+            opacity: '0.5'
+          }
+        }
+      },
+      animation: {
+        'fade-up': 'fade-up 0.5s ease-out forwards',
+        'draw': 'draw 3s ease-out forwards',
+        'pulse-soft': 'pulse-soft 3s ease-in-out infinite'
+      }
     },
   },
   plugins: [
