@@ -1,135 +1,94 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
-import {
-    Code2,
-    Globe,
-    ShoppingCart,
-    Database,
-    ServerCog,
-    Workflow,
-} from 'lucide-react';
-import Link from 'next/link';
+import React, { useRef } from 'react';
+import { Code2, Globe, ShoppingCart, Database, ServerCog, Workflow } from 'lucide-react';
 
 const Services = () => {
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        // Set visibility after component mounts for initial animation
-        setIsVisible(true);
-
-        // Optional: Setup intersection observer for scroll animations
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        setIsVisible(true);
-                    }
-                });
-            },
-            { threshold: 0.1 }
-        );
-
-        // Observe the section
-        const section = document.getElementById('services-section');
-        if (section) {
-            observer.observe(section);
-        }
-
-        return () => {
-            if (section) {
-                observer.unobserve(section);
-            }
-        };
-    }, []);
+    const sectionRef = useRef(null);
 
     const services = [
         {
-            icon: <Code2 className="h-12 w-12 text-[#01AD9F] transition-transform group-hover:scale-110 duration-300" />,
+            icon: <Code2 size={48} className="text-[#01AD9F]" />,
             title: "Mobile & Web Apps",
-            link: "post/mobile-app-development",
             description: "Native and cross-platform mobile applications with cutting-edge features and seamless user experience."
         },
         {
-            icon: <ShoppingCart className="h-12 w-12 text-[#01AD9F] transition-transform group-hover:scale-110 duration-300" />,
+            icon: <ShoppingCart size={48} className="text-[#01AD9F]" />,
             title: "E-commerce Solutions",
-            link: "/post/web-development",
             description: "Custom e-commerce platforms with secure payment integration, inventory management, and analytics."
         },
         {
-            icon: <Database className="h-12 w-12 text-[#01AD9F] transition-transform group-hover:scale-110 duration-300" />,
+            icon: <Database size={48} className="text-[#01AD9F]" />,
             title: "Data Analytics & AI",
-            link: "/post/web-development",
             description: "Data-driven solutions leveraging machine learning and analytics for business intelligence."
         },
         {
-            icon: <ServerCog className="h-12 w-12 text-[#01AD9F] transition-transform group-hover:scale-110 duration-300" />,
+            icon: <ServerCog size={48} className="text-[#01AD9F]" />,
             title: "Development Operation",
-            link: "/post/devops",
             description: "Continuous integration, deployment automation, and cloud infrastructure management."
         },
         {
-            icon: <Workflow className="h-12 w-12 text-[#01AD9F] transition-transform group-hover:scale-110 duration-300" />,
+            icon: <Workflow size={48} className="text-[#01AD9F]" />,
             title: "UI/UX Designing",
-            link: "post/custom-software-solutions",
             description: "Research-driven design creating intuitive & engaging user experiences."
         },
         {
-            icon: <Workflow className="h-12 w-12 text-[#01AD9F] transition-transform group-hover:scale-110 duration-300" />,
+            icon: <Globe size={48} className="text-[#01AD9F]" />,
             title: "Amazon A-Z",
-            link: "post/our-amazon-services",
             description: "Smart PPC optimization for maximum ROAS & marketplace growth."
         }
     ];
 
     return (
         <section 
-            id="services-section" 
-            className="mx-auto px-4 space-y-6 bg-[#111111] py-8 md:py-12 lg:py-20 overflow-hidden"
+            ref={sectionRef}
+            className="relative mx-auto px-4 space-y-12 bg-[#111111] py-16 md:py-24 lg:py-32 overflow-hidden"
         >
-            <div 
-                className={`mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center transition-all duration-700 transform 
-                    ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-            >
-                <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-6xl text-white">
+            {/* Gradient Orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute -top-1/4 -right-1/4 w-1/2 h-1/2 bg-[#01AD9F]/10 rounded-full blur-[120px]"></div>
+                <div className="absolute -bottom-1/4 -left-1/4 w-1/2 h-1/2 bg-[#01AD9F]/10 rounded-full blur-[120px]"></div>
+            </div>
+
+            {/* Section Header */}
+            <div className="relative mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+                <h2 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
                     Our Services
                 </h2>
-                <p className="max-w-[85%] leading-normal text-gray-400 sm:text-lg sm:leading-7">
+                <p className="max-w-[85%] text-lg sm:text-xl text-gray-400 mt-4">
                     Comprehensive software solutions tailored to transform your business ideas into reality.
                 </p>
             </div>
 
-            <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
+            {/* Services Grid */}
+            <div className="relative mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl">
                 {services.map((service, index) => (
-                    <Link href={service?.link} key={index}>
-                        <div 
-                            className={`group relative overflow-hidden rounded-lg border border-[#2A2A2A] bg-[#1A1A1A] select-none 
-                                hover:shadow-lg hover:shadow-teal-900/20 hover:border-[#01AD9F] p-2 transition-all duration-500 
-                                transform hover:-translate-y-1 hover:scale-[1.02]
-                                ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
-                            style={{
-                                transitionDelay: `${index * 100}ms`
-                            }}
-                        >
-                            <div className="flex h-[220px] flex-col justify-between rounded-md p-6 relative z-10">
-                                <div className="transform transition-transform duration-300 group-hover:scale-110">
-                                    {service.icon}
-                                </div>
-                                <div className="space-y-2">
-                                    <h3 className="font-bold text-white group-hover:text-[#01AD9F] transition-colors duration-300">
-                                        {service.title}
-                                    </h3>
-                                    <p className="text-sm text-gray-400 transition-colors duration-300 group-hover:text-gray-300">
-                                        {service.description}
-                                    </p>
-                                </div>
+                    <div 
+                        key={index}
+                        className="group relative bg-[#1A1A1A] rounded-xl border border-[#2A2A2A] p-6
+                            hover:border-[#01AD9F] transition-all duration-500 ease-out
+                            hover:shadow-lg hover:shadow-[#01AD9F]/10
+                            hover:-translate-y-1 hover:scale-[1.02]"
+                    >
+                        {/* Card Content */}
+                        <div className="relative z-10 h-full flex flex-col justify-between gap-6">
+                            <div className="transform transition-transform duration-300 group-hover:scale-110">
+                                {service.icon}
                             </div>
-                            {/* Gradient overlay on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#01AD9F]/0 to-[#01AD9F]/0 
-                                group-hover:from-[#01AD9F]/5 group-hover:to-transparent transition-all duration-300">
+                            <div className="space-y-3">
+                                <h3 className="text-xl font-bold text-white group-hover:text-[#01AD9F] transition-colors duration-300">
+                                    {service.title}
+                                </h3>
+                                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                                    {service.description}
+                                </p>
                             </div>
                         </div>
-                    </Link>
+                        
+                        {/* Hover Gradient */}
+                        <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#01AD9F]/10 to-transparent 
+                            opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
                 ))}
             </div>
         </section>

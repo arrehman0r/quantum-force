@@ -4,6 +4,7 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  transpilePackages: ['gsap'],
   images: {
     domains: ['secure.gravatar.com', '203.161.43.125','images.unsplash.com','blog.al-mizan.store'],
   },
